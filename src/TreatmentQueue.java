@@ -44,10 +44,10 @@ public class TreatmentQueue {
         }
         System.out.println("Current Treatment Requests: ");
         QNode current = front;
-        while (current != null){
+        while (current != null) {
             System.out.println("* " + current.request.printInfo());
             current = current.next;
-
         }
     }
+
 }
