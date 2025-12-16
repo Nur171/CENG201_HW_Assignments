@@ -7,7 +7,7 @@ public class DischargeRecord {
         this.dischargeTime = System.currentTimeMillis();
     }
 
-    public String printInfo(){
-        return "Discharge Record: \nPatient Id= " + patientId + "\nDischarge Time = "+ dischargeTime;
+    public String printInfo() {
+        return "Discharge Record: \nPatient Id= " + patientId + "\nDischarge Time = " + dischargeTime;
     }
 }
