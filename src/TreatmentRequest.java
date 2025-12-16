@@ -11,5 +11,4 @@ public class TreatmentRequest {
         return "Treatment Request { Patient Id: " + patientId + "\n" + "Arrival time: " + arrivalTime + "}";
     }
 
-
 }

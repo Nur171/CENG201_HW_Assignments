@@ -29,9 +29,9 @@ public class Main {
 
         // Removing patient
         boolean removed = list.removePatient(3);
-        if(removed) {
+        if (removed) {
             System.out.println("Patient with id = 3 is removed");
-        }else {
+        } else {
             System.out.println("Patient with id = 3 is not found");
         }
         list.printList();
@@ -41,10 +41,10 @@ public class Main {
 
         // Finding patient
         Patient found = list.findPatient(5);
-        if(found != null) {
+        if (found != null) {
             System.out.println("Patient with id = 5 is found.");
             System.out.println(found.printInfo());
-        }else {
+        } else {
             System.out.println("Patient with id = 5 is not found");
         }
         System.out.println();
@@ -62,7 +62,7 @@ public class Main {
         TreatmentQueue queue = new TreatmentQueue();
 
         // Adding 8 requests
-        for (int i = 1; i<=8; i++){
+        for (int i = 1; i <= 8; i++) {
             queue.enqueue(new TreatmentRequest(i));
         }
 
@@ -73,7 +73,7 @@ public class Main {
         System.out.println("*************************************\n");
 
         // Removing 3 request
-        for(int i= 0; i < 3 ; i++) {
+        for (int i = 0; i < 3; i++) {
             TreatmentRequest removedRequest = queue.dequeue();
             System.out.println("Processed request: " + removedRequest);
         }
@@ -93,11 +93,11 @@ public class Main {
         DischargeStack stack = new DischargeStack();
 
         // Adding 5 discharge records
-        stack.push( new DischargeRecord(11));
-        stack.push( new DischargeRecord(12));
-        stack.push( new DischargeRecord(13));
-        stack.push( new DischargeRecord(14));
-        stack.push( new DischargeRecord(15));
+        stack.push(new DischargeRecord(11));
+        stack.push(new DischargeRecord(12));
+        stack.push(new DischargeRecord(13));
+        stack.push(new DischargeRecord(14));
+        stack.push(new DischargeRecord(15));
 
         System.out.println("After pushing 5 discharge records:");
         stack.printStack();
