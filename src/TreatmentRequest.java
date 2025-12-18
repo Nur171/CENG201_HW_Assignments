@@ -10,4 +10,5 @@ public class TreatmentRequest {
     public String printInfo() {
         return "Treatment Request { Patient Id: " + patientId + "\n" + "Arrival time: " + arrivalTime + "}";
     }
+
 }
