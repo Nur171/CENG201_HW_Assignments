@@ -6,4 +6,5 @@ public class QNode {
         this.request = request;
         this.next = null;
     }
+
 }
