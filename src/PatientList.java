@@ -74,5 +74,4 @@ public class PatientList {
        }
        return count;
     }
-
 }
