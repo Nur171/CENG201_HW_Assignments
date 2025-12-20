@@ -6,5 +6,4 @@ public class SNode {
         this.record = record;
         this.next = null;
     }
-
 }
