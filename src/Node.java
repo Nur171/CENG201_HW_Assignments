@@ -6,4 +6,5 @@ public class Node {
         this.patient = patient;
         this.next = null;
     }
+
 }
