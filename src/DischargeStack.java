@@ -50,4 +50,5 @@ public class DischargeStack {
     public int size() {
         return size;
     }
+
 }
