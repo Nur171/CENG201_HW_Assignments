@@ -83,5 +83,4 @@ public class TreatmentQueue {
             current = current.next;
         }
     }
-
 }
