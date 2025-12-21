@@ -52,14 +52,20 @@ public class HospitalSystem {
 
         // Printing system status
         public void printSystem() {
-            System.out.println("*** Patient List ***");
+            System.out.println("\n*** Patient List ***");
             patientList.printList();
+            System.out.println("\n*************************************\n");
+            System.out.println("*************************************\n");
 
             System.out.println("\n*** Treatment Queue ***");
             treatmentQueue.printQueue();
+            System.out.println("\n*************************************\n");
+            System.out.println("*************************************\n");
 
             System.out.println("\n*** Discharge Stack ***");
             dischargeStack.printStack();
+            System.out.println("\n*************************************\n");
+            System.out.println("*************************************\n");
         }
 
         // Showing sorted list by severity
@@ -70,7 +76,7 @@ public class HospitalSystem {
                 System.out.println("No patients to sort");
                 return;
             }
-            System.out.println("\n=== Patients Sorted by Severity ===");
+            System.out.println("\n*** Patients Sorted by Severity ***");
             for (Patient p : array) {
                 System.out.println("* " + p);
             }
