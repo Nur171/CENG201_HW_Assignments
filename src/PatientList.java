@@ -74,4 +74,15 @@ public class PatientList {
        }
        return count;
     }
+
+    public Patient[] toArray(){
+        Patient[] array = new Patient[size()];
+        Node current = head;
+        int i = 0;
+        while(current != null){
+            array[i++] = current.patient;
+            current = current.next;
+        }
+        return array;
+    }
 }
