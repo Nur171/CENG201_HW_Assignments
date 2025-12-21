@@ -22,7 +22,7 @@ public class HospitalSystem {
         // Adding treatment request
         public void addTreatmentRequest(int patientId, boolean priority) {
             if (!patientMap.containsKey(patientId)) {
-                System.out.println("ERROR: Patient not found!");
+                System.out.println("Patient not found!!!");
                 return;
             }
             TreatmentRequest request = new TreatmentRequest(patientId, priority);
@@ -34,7 +34,7 @@ public class HospitalSystem {
             dischargeStack.push(new DischargeRecord(patientId));
         }
 
-        // Processing treatment request → move to discharge stack
+        // Process treatment request → move to discharge stack
         public void processNextTreatment() {
             TreatmentRequest request = treatmentQueue.dequeue();
 
@@ -68,7 +68,7 @@ public class HospitalSystem {
             System.out.println("*************************************\n");
         }
 
-        // Showing sorted list by severity
+        // Printing sorted list by severity
         public void printSortedBySeverity() {
             Patient[] array = Sorter.sortBySeverity(patientList);
 
