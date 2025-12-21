@@ -3,33 +3,42 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Main task 3
+        // Task 4
+        HospitalSystem hs = new HospitalSystem();
 
-        DischargeStack stack = new DischargeStack();
+        // Adding 10 patients
+        for (int i = 0; i <= 9; i++) {
+            hs.addPatient(new Patient(1 + i, "Patient " + (i + 1), (i % 10) + 1, 30 + i));
+        }
 
-        // Adding 5 discharge records
-        stack.push(new DischargeRecord(11));
-        stack.push(new DischargeRecord(12));
-        stack.push(new DischargeRecord(13));
-        stack.push(new DischargeRecord(14));
-        stack.push(new DischargeRecord(15));
+        // Adding 5 normal + 3 priority treatment requests
+        hs.addTreatmentRequest(1, false);
+        hs.addTreatmentRequest(2, false);
+        hs.addTreatmentRequest(3, false);
+        hs.addTreatmentRequest(4, false);
+        hs.addTreatmentRequest(5, false);
 
-        System.out.println("After pushing 5 discharge records:");
-        stack.printStack();
-        System.out.println("Size: " + stack.size());
-        System.out.println();
+        hs.addTreatmentRequest(6, true);
+        hs.addTreatmentRequest(7, true);
+        hs.addTreatmentRequest(8, true);
 
-        System.out.println("*************************************\n");
+        // Adding 2 discharge records
+        hs.addDischargeRecord(15);
+        hs.addDischargeRecord(16);
 
-        // Popping 2 element
-        System.out.println("Pop 1: " + stack.pop());
-        System.out.println("Pop 2: " + stack.pop());
-        System.out.println();
-        System.out.println("*************************************\n");
+        // Processing 4 treatment requests (priority first)
+        hs.processNextTreatment();
+        hs.processNextTreatment();
+        hs.processNextTreatment();
+        hs.processNextTreatment();
 
-        // Remaining stack
-        System.out.println("Remaining stack:");
-        stack.printStack();
-        System.out.println("Final size: " + stack.size());
+        // Printing final system state
+        hs.printSystem();
+
+        // Sorted list by severity
+        hs.printSortedBySeverity();
+
     }
+
+
 }
