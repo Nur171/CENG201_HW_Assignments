@@ -3,7 +3,7 @@ public class TreatmentRequest {
     long arrivalTime;
     boolean priority; // if true -> high priority patient
 
-    public TreatmentRequest(int patientId) {
+    public TreatmentRequest(int patientId, boolean priority) {
         this.patientId = patientId;
         this.arrivalTime = System.currentTimeMillis();
         this.priority = priority;
