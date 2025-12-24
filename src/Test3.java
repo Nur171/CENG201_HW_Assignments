@@ -29,5 +29,6 @@ public class Test3 {
         stack.printStack();
         System.out.println("Final size: " + stack.size());
     }
+
 }
 
