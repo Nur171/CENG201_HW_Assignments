@@ -37,5 +37,4 @@ public class Test4 {
         hs.printSortedBySeverity();
 
     }
-
 }
