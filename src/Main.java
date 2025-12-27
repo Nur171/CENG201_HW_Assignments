@@ -55,7 +55,7 @@ public class Main {
         System.out.println("*************************************\n");
         System.out.println("*************************************\n");
 
-        // **Testing Task 2
+        // ** Testing Task 2
         TreatmentQueue queue = new TreatmentQueue();
 
         // * Adding 8 requests
@@ -72,7 +72,6 @@ public class Main {
         // * Removing 3 request
         for (int i = 0; i < 3; i++) {
             TreatmentRequest removedRequest = queue.dequeue();
-            System.out.println("Processed request: " + removedRequest);
         }
         System.out.println();
         System.out.println("*************************************\n");
@@ -103,8 +102,9 @@ public class Main {
         System.out.println("*************************************\n");
 
         // * Popping 2 element
-        System.out.println("Pop 1: " + stack.pop());
-        System.out.println("Pop 2: " + stack.pop());
+        stack.pop();
+        System.out.println();
+        stack.pop();
         System.out.println();
         System.out.println("*************************************\n");
 
@@ -143,6 +143,8 @@ public class Main {
         hs.processNextTreatment();
         hs.processNextTreatment();
         hs.processNextTreatment();
+        System.out.println("*************************************\n");
+        System.out.println("*************************************\n");
 
         // * Printing final system state
         hs.printSystem();

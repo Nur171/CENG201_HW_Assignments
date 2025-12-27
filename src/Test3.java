@@ -19,8 +19,9 @@ public class Test3 {
         System.out.println("*************************************\n");
 
         // * Popping 2 element
-        System.out.println("Pop 1: " + stack.pop());
-        System.out.println("Pop 2: " + stack.pop());
+        stack.pop();
+        System.out.println();
+        stack.pop();
         System.out.println();
         System.out.println("*************************************\n");
 

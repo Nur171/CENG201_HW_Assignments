@@ -8,6 +8,6 @@ public class DischargeRecord {
     }
 
     public String printInfo() {
-        return "Discharge Record: \nPatient Id= " + patientId + "\nDischarge Time = " + dischargeTime;
+        return "\nPatient Id= " + patientId + "\nDischarge Time = " + dischargeTime;
     }
 }

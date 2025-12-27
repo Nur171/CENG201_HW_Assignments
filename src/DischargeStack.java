@@ -23,6 +23,7 @@ public class DischargeStack {
         DischargeRecord rec = top.record;
         top = top.next;
         size--;
+        System.out.println("*Removed discharge record: " + rec.printInfo());
         return rec;
     }
 

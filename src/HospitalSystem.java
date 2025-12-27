@@ -47,7 +47,6 @@ public class HospitalSystem {
             patientList.removePatient(request.patientId);
             patientMap.remove(request.patientId);
 
-            System.out.println("Processed patient: " + request.patientId);
         }
 
         // * Printing system status
@@ -78,11 +77,7 @@ public class HospitalSystem {
             }
             System.out.println("\n*** Patients Sorted by Severity ***");
             for (Patient p : array) {
-                System.out.println(
-                        "ID: " + p.id +
-                        "\nName: " + p.name +
-                        "\nSeverity: " + p.severity +
-                        "\nAge: " + p.age);
+                 System.out.println(p.printInfo());
             }
         }
     }

@@ -10,6 +10,6 @@ public class TreatmentRequest {
     }
 
     public String printInfo() {
-        return "Treatment Request { Patient Id: " + patientId + "\n" + "Priority: " + priority + "\n" + "Arrival time: " + arrivalTime + "}";
+        return "Patient Id: " + patientId + "\n" + "Priority: " + priority + "\n" + "Arrival time: " + arrivalTime + "\n";
     }
 }

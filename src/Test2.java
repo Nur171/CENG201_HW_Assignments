@@ -1,6 +1,6 @@
 public class Test2 {
     public static void main(String[] args) {
-// Main task 2
+        // Main task 2
 
         TreatmentQueue queue = new TreatmentQueue();
 
@@ -18,7 +18,6 @@ public class Test2 {
         // * Removing 3 request
         for (int i = 0; i < 3; i++) {
             TreatmentRequest removedRequest = queue.dequeue();
-            System.out.println("Processed request: " + removedRequest);
         }
         System.out.println();
         System.out.println("*************************************\n");

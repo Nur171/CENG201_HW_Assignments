@@ -30,6 +30,8 @@ public class Test4 {
         hs.processNextTreatment();
         hs.processNextTreatment();
         hs.processNextTreatment();
+        System.out.println("*************************************\n");
+        System.out.println("*************************************\n");
 
         // * Printing final system state
         hs.printSystem();

@@ -4,6 +4,7 @@ public class TreatmentQueue {
     private QNode priorityFront;
     private QNode priorityTail;
     private int size;
+    PatientList patientList = new PatientList();
 
     public TreatmentQueue() {
         normalFront = null;
@@ -40,49 +41,50 @@ public class TreatmentQueue {
     }
 
         // * Removing the element from the head
-        public TreatmentRequest dequeue () {
-            if (priorityFront != null) {
-                TreatmentRequest r = priorityFront.request;
-                priorityFront = priorityFront.next;
+    public TreatmentRequest dequeue () {
+        if (priorityFront != null) {
+            TreatmentRequest r = priorityFront.request;
+            priorityFront = priorityFront.next;
 
-                if (priorityFront == null)
-                    priorityTail = null;
+            if (priorityFront == null)
+                priorityTail = null;
 
-                size--;
-                return r;
+        size--;
+        System.out.println("Removed request: " + r.printInfo());
+        return r;
             }
-            if (normalFront != null) {
-                TreatmentRequest r = normalFront.request;
-                normalFront = normalFront.next;
+        if (normalFront != null) {
+            TreatmentRequest r = normalFront.request;
+            normalFront = normalFront.next;
 
-                if (normalFront == null)
-                    normalTail = null;
-
-                size--;
-                return r;
-            }
-            return null;
+            if (normalFront == null)
+                normalTail = null;
+        size--;
+        System.out.println("Removed request: " + r.printInfo());
+        return r;
         }
+        return null;
+    }
 
-        // * The size of the queue
-        public int size () {
+    // * The size of the queue
+    public int size () {
             return size;
         }
 
-        // * Printing the queue
-        public void printQueue () {
-            System.out.println("Priority Requests:");
-            QNode a = priorityFront;
-            while (a != null) {
-                System.out.println(" " + a.request);
-                a = a.next;
-            }
+    // * Printing the queue
+    public void printQueue () {
+        System.out.println("** Priority Requests: \n");
+        QNode a = priorityFront;
+        while (a != null) {
+            System.out.println("*" + a.request.printInfo());
+            a = a.next;
+        }
 
-            System.out.println("Normal Requests: ");
-            a = normalFront;
-            while (a != null) {
-                System.out.println(" " + a.request);
-                a = a.next;
-            }
+        System.out.println("** Normal Requests: \n");
+        a = normalFront;
+        while (a != null) {
+            System.out.println("*" + a.request.printInfo());
+            a = a.next;
         }
     }
+}
