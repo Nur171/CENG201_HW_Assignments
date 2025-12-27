@@ -5,7 +5,7 @@ public class PatientList {
        this.head = null;
    }
 
-   // adding patient to end of the list
+   // * Adding patient to end of the list
    public void addPatient(Patient p){
        Node newNode = new Node(p);
        if (head == null){
@@ -18,7 +18,7 @@ public class PatientList {
        }
        current.next = newNode;
    }
-   // removing patient by ID
+   // * Removing patient by ID
     public Boolean removePatient(int id){
        if (head == null) {
            return false;
@@ -38,7 +38,7 @@ public class PatientList {
        return false;
     }
 
-    // finding patient by id
+    // * Finding patient by id
     public Patient findPatient(int id){
        Node current = head;
 
@@ -55,10 +55,10 @@ public class PatientList {
        Node current = head;
 
        if (head == null){
-           System.out.println("Patient list is empty.");
+           System.out.println("The Patient list is empty.");
            return;
        }
-       System.out.println("Current patients:");
+       System.out.println("The current patients:");
        while (current != null){
            System.out.println("* " + current.patient.printInfo());
            current = current.next;
@@ -75,6 +75,7 @@ public class PatientList {
        return count;
     }
 
+     // * Array for saving the patients
     public Patient[] toArray(){
         Patient[] array = new Patient[size()];
         Node current = head;
