@@ -2,13 +2,13 @@ public class Patient {
 
     // Author: Nur Aksoy - 230444046
 
-    // This class to represent a patient in hospital system
+    // * This class to represent a patient in hospital system
     int id ;
     String name;
     int severity;  // from 1 to 10
     int age;
 
-    // The constructor
+    // * The constructor
     public Patient(int id, String name, int severity, int age){
         this.id = id;
         this.name = name;
@@ -16,7 +16,7 @@ public class Patient {
         this.age = age;
     }
 
-    // printInfo() for printing the patient information
+    // * For printing the patient information
     public String printInfo(){
         return "Patient:\n" +
                " Id = " + id + "\n" +
