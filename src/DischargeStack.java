@@ -7,7 +7,7 @@ public class DischargeStack {
         size = 0;
     }
 
-    // Adding new records
+    // * Adding new records
     public void push(DischargeRecord record) {
         SNode newNode = new SNode(record);
         newNode.next = top;
@@ -15,7 +15,7 @@ public class DischargeStack {
         size++;
     }
 
-    // Removing the top record
+    // * Removing the top record
     public DischargeRecord pop() {
         if (top == null)
             return null;
@@ -26,14 +26,14 @@ public class DischargeStack {
         return rec;
     }
 
-    // Returning the top element
+    // * Returning the top element
     public DischargeRecord peek() {
         if (top == null) return null;
 
         return top.record;
     }
 
-    // Printing the stack
+    // * Printing the stack
     public void printStack() {
         if (top == null) {
             System.out.println("Discharge stack is empty.");
