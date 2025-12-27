@@ -1,10 +1,10 @@
 public class Test1 {
     public static void main(String[] args) {
-        // Main task 1
+        // ** Main task 1
 
         PatientList list = new PatientList();
 
-        // Adding 5 patients
+        // * Adding 5 patients
         Patient a = new Patient(1, "Nur Aksoy", 3, 21);
         Patient b = new Patient(2, "Ahmet Mutlu", 5, 35);
         Patient c = new Patient(3, "Ayşe Yılmaz", 7, 47);
@@ -24,7 +24,7 @@ public class Test1 {
 
         System.out.println("*************************************\n");
 
-        // Removing patient
+        // * Removing patient
         boolean removed = list.removePatient(3);
         if (removed) {
             System.out.println("Patient with id = 3 is removed");
@@ -36,7 +36,7 @@ public class Test1 {
 
         System.out.println("*************************************\n");
 
-        // Finding patient
+        // * Finding patient
         Patient found = list.findPatient(5);
         if (found != null) {
             System.out.println("Patient with id = 5 is found.");
@@ -54,7 +54,5 @@ public class Test1 {
         System.out.println("*************************************\n");
         System.out.println("*************************************\n");
 
-
     }
-
 }
