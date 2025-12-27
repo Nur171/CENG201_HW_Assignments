@@ -13,33 +13,33 @@ public class HospitalSystem {
             patientMap = new HashMap<>();
         }
 
-        // Adding new patient
+        // * Adding new patient
         public void addPatient(Patient p) {
             patientList.addPatient(p);
             patientMap.put(p.id, p);
         }
 
-        // Adding treatment request
+        // * Adding treatment request
         public void addTreatmentRequest(int patientId, boolean priority) {
             if (!patientMap.containsKey(patientId)) {
-                System.out.println("Patient not found!!!");
+                System.out.println("The patient not found!!!");
                 return;
             }
             TreatmentRequest request = new TreatmentRequest(patientId, priority);
             treatmentQueue.enqueue(request);
         }
 
-        // Adding discharge record
+        // * Adding discharge record
         public void addDischargeRecord(int patientId) {
             dischargeStack.push(new DischargeRecord(patientId));
         }
 
-        // Process treatment request → move to discharge stack
+        // * Process treatment request → move to discharge stack
         public void processNextTreatment() {
             TreatmentRequest request = treatmentQueue.dequeue();
 
             if (request == null) {
-                System.out.println("No treatment requests to process");
+                System.out.println("There no treatment requests to process");
                 return;
             }
 
@@ -50,7 +50,7 @@ public class HospitalSystem {
             System.out.println("Processed patient: " + request.patientId);
         }
 
-        // Printing system status
+        // * Printing system status
         public void printSystem() {
             System.out.println("\n*** Patient List ***");
             patientList.printList();
@@ -68,19 +68,22 @@ public class HospitalSystem {
             System.out.println("*************************************\n");
         }
 
-        // Printing sorted list by severity
+        // * Printing sorted list by severity
         public void printSortedBySeverity() {
             Patient[] array = Sorter.sortBySeverity(patientList);
 
             if (array == null || array.length == 0) {
-                System.out.println("No patients to sort");
+                System.out.println("There no patients to sort");
                 return;
             }
             System.out.println("\n*** Patients Sorted by Severity ***");
             for (Patient p : array) {
-                System.out.println("* " + p);
+                System.out.println(
+                        "ID: " + p.id +
+                        "\nName: " + p.name +
+                        "\nSeverity: " + p.severity +
+                        "\nAge: " + p.age);
             }
         }
-
     }
 
