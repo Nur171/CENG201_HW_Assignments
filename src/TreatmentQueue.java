@@ -13,7 +13,7 @@ public class TreatmentQueue {
         size = 0;
     }
 
-    // Adding element to tail
+    // * Adding element to tail
     public void enqueue(TreatmentRequest request) {
         QNode newNode = new QNode(request);
 
@@ -39,7 +39,7 @@ public class TreatmentQueue {
         }
     }
 
-        // Removing the element from the head
+        // * Removing the element from the head
         public TreatmentRequest dequeue () {
             if (priorityFront != null) {
                 TreatmentRequest r = priorityFront.request;
@@ -64,12 +64,12 @@ public class TreatmentQueue {
             return null;
         }
 
-        // The size of the queue
+        // * The size of the queue
         public int size () {
             return size;
         }
 
-        // Printing the queue
+        // * Printing the queue
         public void printQueue () {
             System.out.println("Priority Requests:");
             QNode a = priorityFront;
