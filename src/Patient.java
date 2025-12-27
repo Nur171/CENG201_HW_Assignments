@@ -24,5 +24,4 @@ public class Patient {
                " Severity = " + severity + "\n" +
                " Age = " + age + "\n" ;
     }
-
 }
